@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+
+  <body class="font-[Kanit]">
+    <nav
+      class="p-4 bg-white md:flex md:items-center md:justify-between max-w-screen-xl m-auto"
+    >
+      <div class="flex justify-between items-center">
+        <span class="text-2xl cursor-pointer">
+          <img class="h-12 inline" src="logo.webp" />
+        </span>
+
+        <span class="text-3xl cursor-pointer mx-2 md:hidden block">
+          <i class="fa-solid fa-bars hover:opacity-60" onclick="Menu(this)"></i>
+        </span>
+      </div>
+
+      <ul
+        class="md:flex md:items-center z-[2] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-3 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
+      >
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-l hover:text-cyan-500 duration-500"
+            >หน้าหลัก</a
+          >
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-l hover:text-cyan-500 duration-500"
+            >ร้านค้า</a
+          >
+        </li>
+        <li class="mx-4 my-6 md:my-0">
+          <a href="#" class="text-l hover:text-cyan-500 duration-500"
+            >ติดต่อเรา</a
+          >
+        </li>
+        <button
+          class="bg-[#0D7794] text-white duration-500 px-6 py-2 mx-4 hover:bg-[#044E62] rounded-md"
+        >
+          <i class="fa-solid fa-cart-shopping mr-2"></i>
+          ตะกร้าสินค้า
+        </button>
+      </ul>
+    </nav>
+
+    <script>
+      function Menu(e) {
+        let list = document.querySelector("ul");
+        e.name === "menu"
+          ? ((e.name = "close"),
+            list.classList.add("top-[80px]"),
+            list.classList.add("opacity-100"))
+          : ((e.name = "menu"),
+            list.classList.remove("top-[80px]"),
+            list.classList.remove("opacity-100"));
+      }
+    </script>
+    <section>
+      <div class="landing">
+        <img style="z-index: 0" src="landingpage.jpg" alt="" />
+      </div>
+    </section>
+    <section class="container m-auto max-w-screen-xl">
+      <style>
+        .hot-item {
+          margin: 0 auto;
+          transition: 0.2s ease-in-out;
+        }
+        .hot-item:hover {
+          transform: scale(0.95);
+        }
+        .hoveritem {
+          margin: 0 auto;
+          transition: 0.2s ease-in-out;
+        }
+        .hoveritem:hover {
+          transform: scale(0.95);
+        }
+      </style>
+      <div class="m-5 mt-10 flex justify-between">
+        <div class="block-1">
+          <h3 class="text-lg">หนังสือยอดนิยม</h3>
+          <h2 class="text-4xl font-medium text-[#0D7794]">ประจำสัปดาห์</h2>
+        </div>
+        <div class="block-2 flex items-end">
+          <button class="hover:text-[#a3a3a3] duration-200">ดูทั้งหมด</button>
+        </div>
+      </div>
+      <div class="grid grid-cols-3 px-4 gap-2 md:grid-cols-6">
+        <div class="hot-item">
+          <img class="rounded-md" src="week1.png" alt="" />
+        </div>
+        <div class="hot-item">
+          <img class="rounded-md" src="week2.png" alt="" />
+        </div>
+        <div class="hot-item">
+          <img class="rounded-md" src="week3.png" alt="" />
+        </div>
+        <div class="hot-item">
+          <img class="rounded-md" src="week4.png" alt="" />
+        </div>
+        <div class="hot-item">
+          <img class="rounded-md" src="week5.png" alt="" />
+        </div>
+        <div class="hot-item">
+          <img class="rounded-md" src="week6.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="bg-[#F5F5F5] p-12 my-12">
+      <div class="text-center">
+        <h2 class="text-3xl text-[#717171] font-semibold">
+          ขั้นตอนสำหรับ<span class="text-[#0D7794]">สั่งซื้อสินค้า</span>
+        </h2>
+        <div
+          class="grid grid-cols-4 gap-3 md:gap-6 max-w-screen-md m-auto mt-5"
+        >
+          <div>
+            <div
+              class="py-5 md:py-10 rounded-2xl md:rounded-3xl mb-2"
+              style="
+                background: linear-gradient(180deg, #0d7794 0%, #0c4c5e 100%);
+              "
+            >
+              <i
+                class="fa-solid fa-bag-shopping text-white text-5xl md:text-6xl"
+              ></i>
+            </div>
+            <span class="text-xl">เลือกสินค้า</span>
+          </div>
+          <div>
+            <div
+              class="py-5 md:py-10 rounded-2xl md:rounded-3xl mb-2"
+              style="
+                background: linear-gradient(180deg, #0d7794 0%, #0c4c5e 100%);
+              "
+            >
+              <i
+                class="fa-solid fa-money-check-dollar text-white text-5xl md:text-6xl"
+              ></i>
+            </div>
+            <span class="text-xl">กรอกที่อยู่</span>
+          </div>
+          <div>
+            <div
+              class="py-5 md:py-10 rounded-2xl md:rounded-3xl mb-2"
+              style="
+                background: linear-gradient(180deg, #0d7794 0%, #0c4c5e 100%);
+              "
+            >
+              <i
+                class="fa-solid fa-dollar-sign text-white text-5xl md:text-6xl"
+              ></i>
+            </div>
+            <span class="text-xl">ชำระเงิน</span>
+          </div>
+          <div>
+            <div
+              class="py-5 md:py-10 rounded-2xl md:rounded-3xl mb-2"
+              style="
+                background: linear-gradient(180deg, #0d7794 0%, #0c4c5e 100%);
+              "
+            >
+              <i
+                class="fa-solid fa-envelope text-white text-5xl md:text-6xl"
+              ></i>
+            </div>
+            <span class="text-xl">เสร็จสิ้น</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container m-auto max-w-screen-xl">
+      <div class="mx-5 mt-10 flex justify-between">
+        <div class="block-1">
+          <h3 class="text-lg">หนังสือยอดนิยม</h3>
+          <h2 class="text-4xl font-medium text-[#0D7794]">ประจำสัปดาห์</h2>
+        </div>
+        <div class="block-2 flex items-end">
+          <button class="hover:text-[#a3a3a3] duration-200">ดูทั้งหมด</button>
+        </div>
+      </div>
+      <div class="mx-5">
+        <button
+          type="button"
+          style="margin-left: 5px; margin-top: 10px"
+          class="hoveritem bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-md px-10 py-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+        >
+          <span class="">จิตวิทยา</span>
+        </button>
+        <button
+          type="button"
+          style="margin-left: 5px; margin-top: 10px"
+          class="hoveritem bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-md px-10 py-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+        >
+          <span class="">จิตวิทยา</span>
+        </button>
+        <button
+          type="button"
+          style="margin-left: 5px; margin-top: 10px"
+          class="hoveritem bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-md px-10 py-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+        >
+          <span class="">จิตวิทยา</span>
+        </button>
+        <button
+          type="button"
+          style="margin-left: 5px; margin-top: 10px"
+          class="hoveritem bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-md px-10 py-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+        >
+          <span class="">จิตวิทยา</span>
+        </button>
+        <button
+          type="button"
+          style="margin-left: 5px; margin-top: 10px"
+          class="hoveritem bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-md px-10 py-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+        >
+          <span class="">จิตวิทยา</span>
+        </button>
+        <button
+          type="button"
+          style="margin-left: 5px; margin-top: 10px"
+          class="hoveritem bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-md px-10 py-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+        >
+          <span class="">จิตวิทยา</span>
+        </button>
+      </div>
+
+      <!-- <button
+              type="button"
+              style="margin-left: 5px; margin-top: 10px"
+              class="hoveritem bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-md px-10 py-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+            >
+              <span class="">จิตวิทยา</span>
+            </button> -->
+      <div class="grid grid-cols-2 px-4 gap-2 md:grid-cols-6 mt-5">
+        <div class="hot-item">
+          <div
+            id="best"
+            class="badge absolute bg-red-600 text-white px-3 rounded-br-2xl"
+          >
+            มาแรง
+          </div>
+          <img class="rounded-md" src="list1.png" alt="" />
+          <div class="p-1">
+            <h2 class="mb-2">
+              พลิกปรับรอจังหวะเพื่อให้ก้าวไปต่อเพื่อเติมพลังบวก
+            </h2>
+            <div class="flex justify-between items-center">
+              <h4 style="color: gray">ราคา 379.-</h4>
+              <button
+                type="button"
+                class="text-white bg-[#575757] hover:bg-[#717171] font-medium rounded-xl text-sm px-4 py-2 text-center inline-flex items-center me-2"
+              >
+                หยิบใส่ตะกร้า
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="hot-item">
+          <div
+            id="new"
+            class="badge absolute bg-white text-black px-3 rounded-br-2xl"
+          >
+            มาใหม่
+          </div>
+          <img class="rounded-md" src="list1.png" alt="" />
+          <div class="p-1">
+            <h2 class="mb-2">
+              พลิกปรับรอจังหวะเพื่อให้ก้าวไปต่อเพื่อเติมพลังบวก
+            </h2>
+            <div class="flex justify-between items-center">
+              <h4 style="color: gray">ราคา 379.-</h4>
+              <button
+                type="button"
+                class="text-white bg-[#575757] hover:bg-[#717171] font-medium rounded-xl text-sm px-4 py-2 text-center inline-flex items-center me-2"
+              >
+                หยิบใส่ตะกร้า
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="hot-item">
+          <img class="rounded-md" src="list1.png" alt="" />
+          <div class="p-1">
+            <h2 class="mb-2">
+              พลิกปรับรอจังหวะเพื่อให้ก้าวไปต่อเพื่อเติมพลังบวก
+            </h2>
+            <div class="flex justify-between items-center">
+              <h4 style="color: gray">ราคา 379.-</h4>
+              <button
+                type="button"
+                class="text-white bg-[#575757] hover:bg-[#717171] font-medium rounded-xl text-sm px-4 py-2 text-center inline-flex items-center me-2"
+              >
+                หยิบใส่ตะกร้า
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="hot-item">
+          <img class="rounded-md" src="list1.png" alt="" />
+          <div class="p-1">
+            <h2 class="mb-2">
+              พลิกปรับรอจังหวะเพื่อให้ก้าวไปต่อเพื่อเติมพลังบวก
+            </h2>
+            <div class="flex justify-between items-center">
+              <h4 style="color: gray">ราคา 379.-</h4>
+              <button
+                type="button"
+                class="text-white bg-[#575757] hover:bg-[#717171] font-medium rounded-xl text-sm px-4 py-2 text-center inline-flex items-center me-2"
+              >
+                หยิบใส่ตะกร้า
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="hot-item">
+          <img class="rounded-md" src="list1.png" alt="" />
+          <div class="p-1">
+            <h2 class="mb-2">
+              พลิกปรับรอจังหวะเพื่อให้ก้าวไปต่อเพื่อเติมพลังบวก
+            </h2>
+            <div class="flex justify-between items-center">
+              <h4 style="color: gray">ราคา 379.-</h4>
+              <button
+                type="button"
+                class="text-white bg-[#575757] hover:bg-[#717171] font-medium rounded-xl text-sm px-4 py-2 text-center inline-flex items-center me-2"
+              >
+                หยิบใส่ตะกร้า
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="hot-item">
+          <img class="rounded-md" src="list1.png" alt="" />
+          <div class="p-1">
+            <h2 class="mb-2">
+              พลิกปรับรอจังหวะเพื่อให้ก้าวไปต่อเพื่อเติมพลังบวก
+            </h2>
+            <div class="flex justify-between items-center">
+              <h4 style="color: gray">ราคา 379.-</h4>
+              <button
+                type="button"
+                class="text-white bg-[#575757] hover:bg-[#717171] font-medium rounded-xl text-sm px-4 py-2 text-center inline-flex items-center me-2"
+              >
+                หยิบใส่ตะกร้า
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <footer class="bg-[#BCBCBC] text-white py-8 mt-12">
+      <div class="mx-auto flex justify-between max-w-screen-xl p-5">
+        <!-- Column 1 -->
+        <div class="w-1/4">
+          <img src="logo.webp" alt="Logo" class="">
+        </div>
+  
+        <!-- Column 2 -->
+        <div class="w-1/4">
+          <h3 class="text-md font-medium mb-4 text-[#717171]">About</h3>
+          <p class="text-[#717171]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+  
+        <!-- Column 3 -->
+        <div class="w-1/4">
+          <h3 class="text-md font-medium mb-4 text-[#717171]">Pages</h3>
+          <ul class="text-[#717171]">
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+
+
+  </body>
+</html>
